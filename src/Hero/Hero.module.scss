@@ -1,0 +1,46 @@
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.imgContainer {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+.heroImg {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.textContainer {
+  width: 100%;
+  position: absolute;
+  top: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: white;
+  animation: appear 2s;
+}
+
+.title {
+  font-family: 'Sacramento', sans-serif;
+  font-size: clamp(2.7rem, calc(1.2955rem + 6.4204vw), 9rem);
+}
+
+.phrase {
+  margin-top: calc(40px + 3vw);
+  font-size: clamp(1.7rem, calc(1.3433rem + 1.6306vw), 3.3rem);
+  line-height: 1.8;
+  max-width: 800px;
+  padding: 0 10px;
+}
