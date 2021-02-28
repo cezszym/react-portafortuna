@@ -1,15 +1,15 @@
 import React from 'react';
 import Div100vh from 'react-div-100vh';
-import heroImg from '../../../assets/images/hero-min.jpg';
+import heroImg from '../../../assets/images/hero-min.webp';
 import heroImgWebp from '../../../assets/images/hero-min.webp';
 import styles from './Hero.module.scss';
 
 const Hero = () => (
-  <Div100vh>
+  <Div100vh className={styles.fullHeight}>
     <div className={styles.imgContainer}>
       <picture>
         <source srcset={heroImgWebp} />
-        <img src={heroImg} alt="Hero image" className={styles.heroImg} />
+        <img src={heroImg} alt="Hero" className={styles.heroImg} />
       </picture>
       <div className={styles.textContainer}>
         <h1 className={styles.title}>Pizzeria Portafortuna</h1>

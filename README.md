@@ -1,7 +1,10 @@
 # Next TO DO
 
-Menu bar: 👷‍♂️
+## Menu bar:
 
-Finish hero image:
+☑️ Sticky menu for destkop
+👉 Hamburger menu for mobile
 
-☑️ Done - so far
+## Hero Image:
+
+☑️ Finish image optimalization
