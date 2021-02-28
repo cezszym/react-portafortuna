@@ -1,7 +1,7 @@
 # Next TO DO
 
+Menu bar: 👷‍♂️
+
 Finish hero image:
 
-- add picture tag
-- add better optimalization
-- fix 100vh bug on mobile
+☑️ Done - so far
