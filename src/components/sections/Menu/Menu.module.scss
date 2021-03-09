@@ -1,15 +1,115 @@
 .menuContainer {
   width: 100%;
   z-index: 999;
+  padding: 20px 0;
+  background: rgba(0, 0, 0, 0.9);
   position: sticky;
   top: 0;
 }
 
 .linkList {
-  padding: 15px 0;
+  padding: 0 5px;
   display: flex;
   justify-content: space-evenly;
+  font-weight: 700;
   font-size: 1.5rem;
   color: white;
-  background: rgba(0, 0, 0, 0.8);
+}
+
+.link {
+  transition: all 0.4s;
+  &:hover {
+    transition: all 0.3s;
+    color: #e45826;
+  }
+}
+
+.hamburger {
+  display: none;
+}
+
+@media (max-width: 1000px) {
+  .menuContainer {
+    display: none;
+  }
+  .hamburger {
+    z-index: 3;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 55px;
+    height: 55px;
+    top: 50px;
+    right: 30px;
+    background: rgba(255, 255, 255, 0.35);
+    border-radius: 50%;
+    box-shadow: 0px 10px 13px -7px #000000,
+      0 5px 15px 5px rgba(255, 255, 255, 0.1);
+    transition: 0.5s;
+    &.active {
+      box-shadow: none;
+      .bar:nth-child(1) {
+        transform: rotate(45deg);
+        top: 9px;
+      }
+      .bar:nth-child(2) {
+        opacity: 0;
+      }
+      .bar:nth-child(3) {
+        transform: rotate(-45deg);
+        bottom: 9px;
+      }
+    }
+  }
+
+  .bar {
+    transition: all 0.5s;
+    position: relative;
+    width: 30px;
+    height: 5px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    margin: 2px 0;
+    &:nth-child(1) {
+      transform: rotate(0);
+      top: 0;
+    }
+    &:nth-child(2) {
+      opacity: 1;
+    }
+    &:nth-child(3) {
+      transform: rotate(0);
+      bottom: 0;
+    }
+  }
+  .modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    background: #121111;
+    width: 100vw;
+    transform: translateX(100vw);
+    height: 100vh;
+    opacity: 0;
+    transition: 0.5s;
+    z-index: 2;
+    &.active {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  .modalLinks {
+    height: 100%;
+    position: relative;
+    top: 23%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.8rem;
+    line-height: 2.5;
+    font-weight: 800;
+    color: rgba(255, 255, 255, 0.8);
+  }
 }

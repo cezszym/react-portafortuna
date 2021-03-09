@@ -15,8 +15,9 @@ class App extends React.Component {
   render() {
     return (
       <>
-        <Menu links={this.links} s />
         <Hero />
+        <Menu links={this.links} />
+        <div className="placeholder" />
       </>
     );
   }

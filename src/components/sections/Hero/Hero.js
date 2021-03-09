@@ -1,24 +1,30 @@
 import React from 'react';
-import Div100vh from 'react-div-100vh';
+import { use100vh } from 'react-div-100vh';
 import heroImg from '../../../assets/images/hero-min.webp';
 import heroImgWebp from '../../../assets/images/hero-min.webp';
+import ArrowDown from '../../partials/ArrowDown/ArrowDown';
 import styles from './Hero.module.scss';
 
-const Hero = () => (
-  <Div100vh className={styles.fullHeight}>
-    <div className={styles.imgContainer}>
-      <picture>
-        <source srcset={heroImgWebp} />
-        <img src={heroImg} alt="Hero" className={styles.heroImg} />
-      </picture>
-      <div className={styles.textContainer}>
-        <h1 className={styles.title}>Pizzeria Portafortuna</h1>
-        <p className={styles.phrase}>
-          Włoska kuchnia to nasza pasja i chcemy się nią podzielić!
-        </p>
+const Hero = () => {
+  const mobileHeight = use100vh();
+  return (
+    <div style={{ height: mobileHeight }} className={styles.fullHeight}>
+      <div className={styles.imgContainer}>
+        <picture>
+          <source srcSet={heroImgWebp} />
+          <img src={heroImg} alt="Hero" className={styles.heroImg} />
+        </picture>
+        <div className={styles.contentContainer}>
+          <h1 className={styles.title}>Pizzeria Portafortuna</h1>
+          <p className={styles.phrase}>
+            Włoska kuchnia to nasza <span className={styles.fat}>pasja</span> i
+            chcemy się nią podzielić!
+          </p>
+          <ArrowDown />
+        </div>
       </div>
     </div>
-  </Div100vh>
-);
+  );
+};
 
 export default Hero;

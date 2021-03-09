@@ -1,16 +1,21 @@
 @keyframes appear {
   0% {
     opacity: 0;
+    transform: scale(0.9);
+    transform-origin: center;
   }
 
   100% {
     opacity: 1;
+    transform: scale(1);
+    transform-origin: center;
   }
 }
 
-.fullHeight {
-  position: absolute;
-  top: 0;
+@media (min-width: 1000px) {
+  .fullHeight {
+    height: calc(100vh - 75px) !important;
+  }
 }
 
 .imgContainer {
@@ -25,10 +30,11 @@
   object-fit: cover;
 }
 
-.textContainer {
+.contentContainer {
+  font-weight: 700;
   width: 100%;
   position: absolute;
-  top: 20%;
+  top: 10%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -42,10 +48,22 @@
 }
 
 .phrase {
-  margin-top: calc(40px + 3vw);
+  padding: 0 30px;
+  margin: calc(40px + 3vw) 0;
   font-size: clamp(1.7rem, calc(1.3433rem + 1.6306vw), 3.3rem);
+  font-style: italic;
+  font-weight: 500;
   line-height: 1.6;
   max-width: 800px;
-  padding: 0 10px;
-  animation: appear 2s;
+  animation-name: appear;
+  animation-duration: 1.4s;
+  .fat {
+    font-weight: 700;
+  }
+}
+
+@media (max-width: 1000px) {
+  .contentContainer {
+    top: 25%;
+  }
 }
