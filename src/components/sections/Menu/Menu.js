@@ -11,8 +11,8 @@ const Menu = ({ links, href }) => {
       <div className={styles.menuContainer}>
         <ul className={styles.linkList}>
           {links.map((link) => (
-            <li className={styles.link} key={link}>
-              <a href={href}>{link}</a>
+            <li className={styles.link} key={link.name}>
+              <a href={link.href}>{link.name}</a>
             </li>
           ))}
         </ul>
@@ -28,8 +28,10 @@ const Menu = ({ links, href }) => {
       <div className={`${styles.modal} ${activeClass}`}>
         <ul className={styles.modalLinks}>
           {links.map((link) => (
-            <li className={styles.modalLink} key={link}>
-              <a href={href}>{link}</a>
+            <li className={styles.modalLink} key={link.name}>
+              <a onClick={() => setModalOpen(!modalOpen)} href={link.href}>
+                {link.name}
+              </a>
             </li>
           ))}
         </ul>
@@ -42,7 +44,6 @@ const Menu = ({ links, href }) => {
 
 Menu.defaultProps = {
   links: [],
-  href: '/#',
 };
 
 export default Menu;

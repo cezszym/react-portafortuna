@@ -8,7 +8,7 @@ import styles from './Hero.module.scss';
 const Hero = () => {
   const mobileHeight = use100vh();
   return (
-    <div style={{ height: mobileHeight }} className={styles.fullHeight}>
+    <header style={{ height: mobileHeight }} className={styles.fullHeight}>
       <div className={styles.imgContainer}>
         <picture>
           <source srcSet={heroImgWebp} />
@@ -23,7 +23,7 @@ const Hero = () => {
           <ArrowDown />
         </div>
       </div>
-    </div>
+    </header>
   );
 };
 

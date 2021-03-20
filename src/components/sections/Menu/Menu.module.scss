@@ -11,7 +11,7 @@
   padding: 0 5px;
   display: flex;
   justify-content: space-evenly;
-  font-weight: 700;
+  font-weight: 900;
   font-size: 1.5rem;
   color: white;
 }
@@ -24,7 +24,8 @@
   }
 }
 
-.hamburger {
+.hamburger,
+.modalLinks {
   display: none;
 }
 
@@ -110,6 +111,6 @@
     font-size: 1.8rem;
     line-height: 2.5;
     font-weight: 800;
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, 0.9);
   }
 }
