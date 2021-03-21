@@ -20,7 +20,7 @@ const Hero = () => {
             Włoska kuchnia to nasza <span className={styles.fat}>pasja</span> i
             chcemy się nią podzielić!
           </p>
-          <ArrowDown />
+          <ArrowDown target="nasza-pasja" />
         </div>
       </div>
     </header>

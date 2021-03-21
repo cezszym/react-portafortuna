@@ -34,7 +34,7 @@ class App extends React.Component {
         <Hero />
         <Menu links={this.links} />
         <Passion />
-        <div className="placeholder" />
+        <div id="ph" className="placeholder" />
       </>
     );
   }

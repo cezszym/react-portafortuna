@@ -1,12 +1,13 @@
 # Next TO DO
 
-## Arrow down partial:
-
-👉 Add sroll method
-
 ## Our Passion section:
 
+👉 Optimaze image
 ☑️ Left part with text
+
+## Arrow down partial:
+
+☑️ Add sroll method
 
 ## Menu bar:
 

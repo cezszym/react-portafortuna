@@ -21,7 +21,7 @@ const Passion = () => {
             Proin maximus magna id metus ultricies, posuere pulvinar tortor
             ornare.
           </p>
-          <ArrowDown />
+          <ArrowDown target="ph" />
         </div>
         <div className={styles.right}>
           <picture>
