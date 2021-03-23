@@ -1,8 +1,13 @@
 # Next TO DO
 
+## Products section:
+
+👉 Add ProductList component
+👉 Add Product component
+
 ## Our Passion section:
 
-👉 Optimaze image
+☑️ Optimaze image
 ☑️ Left part with text
 
 ## Arrow down partial:

@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './Passion.module.scss';
 import rightImg from '../../../assets/images/passion.jpg';
+import rightImgWebp from '../../../assets/images/passion.webp';
 import ArrowDown from '../../partials/ArrowDown/ArrowDown';
 import { use100vh } from 'react-div-100vh';
 
@@ -25,7 +26,7 @@ const Passion = () => {
         </div>
         <div className={styles.right}>
           <picture>
-            <source srcSet={rightImg} />
+            <source srcSet={rightImgWebp} />
             <img src={rightImg} alt="nasza pasja" className={styles.image} />
           </picture>
         </div>
