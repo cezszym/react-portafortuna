@@ -1,4 +1,5 @@
 import React from 'react';
+import SectionHeader from './components/partials/SectionHeader/SectionHeader';
 import Hero from './components/sections/Hero/Hero';
 import Menu from './components/sections/Menu/Menu';
 import Passion from './components/sections/Passion/Passion';
@@ -34,6 +35,10 @@ class App extends React.Component {
         <Hero />
         <Menu links={this.links} />
         <Passion />
+        <SectionHeader
+          head="Wyjątkowe składniki"
+          subHead="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Molestie ac feugiat sed lectus vestibulum matti"
+        />
         <div id="ph" className="placeholder" />
       </>
     );

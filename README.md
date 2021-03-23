@@ -4,6 +4,7 @@
 
 👉 Add ProductList component
 👉 Add Product component
+☑️ Add SectionHeader
 
 ## Our Passion section:
 

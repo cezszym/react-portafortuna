@@ -1,0 +1,81 @@
+.wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 250px 100px 0;
+}
+
+.head {
+  font-size: clamp(1.7rem, calc(1.3433rem + 1.6306vw), 3.3rem);
+  font-weight: 900;
+  margin-bottom: 45px;
+}
+
+.leftLines {
+  &::before {
+    content: '';
+    position: absolute;
+    width: 90vw;
+    height: 0;
+    top: -150px;
+    left: 0;
+    border-bottom: 5px black solid;
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    width: 70vw;
+    height: 0;
+    top: -100px;
+    left: 0;
+    border-bottom: 5px black solid;
+  }
+}
+
+.rightLines {
+  &::before {
+    content: '';
+    position: absolute;
+    width: 90vw;
+    height: 0;
+    top: -150px;
+    right: 0;
+    border-bottom: 5px black solid;
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    width: 70vw;
+    height: 0;
+    top: -100px;
+    right: 0;
+    border-bottom: 5px black solid;
+  }
+}
+.subHead {
+  max-width: 75%;
+}
+
+@media (max-width: 800px) {
+  .wrapper {
+    margin: 150px 0 50px 0;
+  }
+  .rightLines,
+  .leftLines {
+    &::before {
+      top: -75px;
+    }
+    &::after {
+      top: -50px;
+    }
+  }
+  .head {
+    margin-bottom: 20px;
+  }
+  .subHead {
+    font-size: 1rem;
+    max-width: 90%;
+  }
+}
