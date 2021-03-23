@@ -2,8 +2,10 @@
 
 ## Products section:
 
-👉 Add ProductList component
-👉 Add Product component
+👉 Retrive data file
+👉 Optimaze images
+☑️ Add ProductList component
+☑️ Add Product component
 ☑️ Add SectionHeader
 
 ## Our Passion section:
