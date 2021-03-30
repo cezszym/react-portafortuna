@@ -1,16 +1,27 @@
 # Next TO DO
 
+## Menu card section:
+
+👉 Add card list
+
+☑️ Add basic options
+
 ## Products section:
 
-👉 Retrive data file
-👉 Optimaze images
+☑️ Retrive data file
+
+☑️ Optimaze images
+
 ☑️ Add ProductList component
+
 ☑️ Add Product component
+
 ☑️ Add SectionHeader
 
 ## Our Passion section:
 
 ☑️ Optimaze image
+
 ☑️ Left part with text
 
 ## Arrow down partial:

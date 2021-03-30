@@ -8,7 +8,12 @@ const Product = ({ name, desc, image }) => (
       <p className={styles.productDesc}>{desc}</p>
     </div>
     <div className={styles.imageContainer}>
-      {image && <img className={styles.productImage} src={image} />}
+      {image && (
+        <picture>
+          <source srcSet={image.webp} />
+          <img src={image.jpg} alt="product" className={styles.productImage} />
+        </picture>
+      )}
     </div>
   </li>
 );
