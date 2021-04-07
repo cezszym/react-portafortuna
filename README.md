@@ -2,7 +2,9 @@
 
 ## Menu card section:
 
-👉 Add card list
+👉 Add card list type funcinality
+
+☑️ Add card list
 
 ☑️ Add basic options
 

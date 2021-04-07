@@ -2,8 +2,9 @@ import React from 'react';
 import styles from './MenuCard.module.scss';
 import SectionHeader from '../../partials/SectionHeader/SectionHeader';
 import FoodOptions from './FoodOptions/FoodOptions';
+import FoodList from './FoodList/FoodList';
 
-const MenuCard = () => (
+const MenuCard = ({ pizza }) => (
   <>
     <SectionHeader
       head="Menu"
@@ -12,6 +13,7 @@ const MenuCard = () => (
       right
     />
     <FoodOptions />
+    <FoodList pizza={pizza} />
   </>
 );
 

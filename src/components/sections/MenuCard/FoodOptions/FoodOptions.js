@@ -14,7 +14,10 @@ const FoodOptions = () => {
       <div className={styles.options}>
         <div className={styles.option}>
           <div
-            onClick={() => setVegan(!vegan)}
+            onClick={() => {
+              setVegan(!vegan);
+              setFish(false);
+            }}
             className={`${styles.optionCircle} ${vegan ? styles.active : ''}`}
           >
             <img src={veganIcon} className={styles.icon} alt="food option" />
@@ -23,7 +26,10 @@ const FoodOptions = () => {
         </div>
         <div className={styles.option}>
           <div
-            onClick={() => setFish(!fish)}
+            onClick={() => {
+              setFish(!fish);
+              setVegan(false);
+            }}
             className={`${styles.optionCircle} ${fish ? styles.active : ''}`}
           >
             <img src={fishIcon} className={styles.icon} alt="food option" />

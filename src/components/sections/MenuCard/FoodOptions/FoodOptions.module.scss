@@ -6,12 +6,45 @@
 }
 
 .option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
+  .optionCircle ~ p {
+    position: relative;
+    width: fit-content;
+    &::after {
+      position: absolute;
+      content: '';
+      width: 0;
+      height: 0;
+      left: 0;
+      bottom: -8px;
+      transition: 0.4s;
+      border-radius: 5px;
+      border-bottom: 3px solid #5c5858;
+    }
+  }
+  .active {
+    transform: translateY(-3px);
+    & ~ p {
+      &::after {
+        width: 100%;
+        transition: 0.4s;
+      }
+    }
+  }
+
   &:nth-of-type(1) {
     color: #218e0f;
     .active {
       box-shadow: 0px 10px 13px -14px #000000,
         0 5px 15px 5px rgba(255, 255, 255, 0), inset 0px 0px 0px 7px #218e0f;
+      & ~ p {
+        &::after {
+          border-bottom: 3px solid #218e0f;
+        }
+      }
     }
   }
   &:nth-of-type(2) {
@@ -19,6 +52,11 @@
     .active {
       box-shadow: 0px 10px 13px -14px #000000,
         0 5px 15px 5px rgba(255, 255, 255, 0), inset 0px 0px 0px 7px #1a059d;
+      & ~ p {
+        &::after {
+          border-bottom: 3px solid #1a059d;
+        }
+      }
     }
   }
   &:nth-of-type(3) {
@@ -26,6 +64,11 @@
     .active {
       box-shadow: 0px 10px 13px -14px #000000,
         0 5px 15px 5px rgba(255, 255, 255, 0), inset 0px 0px 0px 7px #de0d00;
+      & ~ p {
+        &::after {
+          border-bottom: 3px solid #de0d00;
+        }
+      }
     }
   }
 }
@@ -51,6 +94,7 @@
 }
 .icon {
   width: 40%;
+  user-select: none;
 }
 
 @media (max-width: 1000px) {
@@ -60,26 +104,20 @@
   .option {
     &:nth-of-type(1) {
       .active {
-        .active {
-          box-shadow: 0px 10px 13px -14px #000000,
-            0 5px 15px 5px rgba(255, 255, 255, 0), inset 0px 0px 0px 4px #218e0f;
-        }
+        box-shadow: 0px 10px 13px -14px #000000,
+          0 5px 15px 5px rgba(255, 255, 255, 0), inset 0px 0px 0px 4px #218e0f;
       }
     }
     &:nth-of-type(2) {
       .active {
-        .active {
-          box-shadow: 0px 10px 13px -14px #000000,
-            0 5px 15px 5px rgba(255, 255, 255, 0), inset 0px 0px 0px 4px #1a059d;
-        }
+        box-shadow: 0px 10px 13px -14px #000000,
+          0 5px 15px 5px rgba(255, 255, 255, 0), inset 0px 0px 0px 4px #1a059d;
       }
     }
     &:nth-of-type(3) {
       .active {
-        .active {
-          box-shadow: 0px 10px 13px -14px #000000,
-            0 5px 15px 5px rgba(255, 255, 255, 0), inset 0px 0px 0px 4px #de0d00;
-        }
+        box-shadow: 0px 10px 13px -14px #000000,
+          0 5px 15px 5px rgba(255, 255, 255, 0), inset 0px 0px 0px 4px #de0d00;
       }
     }
   }
@@ -98,9 +136,11 @@
   }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 800px) {
+  .option {
+    margin: 0 20px;
+  }
   .option p {
-    margin: 0 15px;
     font-size: 0.8rem;
   }
 }

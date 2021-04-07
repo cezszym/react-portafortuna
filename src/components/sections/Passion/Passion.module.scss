@@ -39,14 +39,14 @@
   font-size: 45px;
   margin-bottom: 35px;
   &::after {
-    bottom: -5px;
+    bottom: -15px;
     left: 0;
     position: absolute;
     content: '';
     width: 100%;
-    height: 8px;
-    border-top: 2px solid white;
-    border-bottom: 2px solid white;
+    height: 10px;
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
   }
 }
 .boxText {

@@ -56,3 +56,63 @@ export const products = [
     image: { jpg: salame, webp: salameWebp },
   },
 ];
+
+export const pizza = [
+  {
+    name: 'Margaritha',
+    topings: 'sos pomidorowy, Mozzarella di Buffalo',
+    pref: {
+      vege: true,
+      fish: false,
+      spicy: false,
+    },
+    smallPrice: 20,
+    bigPrice: 24,
+  },
+  {
+    name: 'Fresca',
+    topings: 'sos pomidorowy, Mozzarella di Buffalo,  świeże pomidory, rukola',
+    pref: {
+      vege: true,
+      fish: false,
+      spicy: false,
+    },
+    smallPrice: 21,
+    bigPrice: 25,
+  },
+  {
+    name: 'Salame',
+    topings: 'sos pomidorowy, Mozzarella di Buffalo, Spinata Picante, ser feta',
+    pref: {
+      vege: false,
+      fish: false,
+      spicy: false,
+    },
+    smallPrice: 20,
+    bigPrice: 24,
+  },
+  {
+    name: 'Tuna',
+    topings:
+      'sos pomidorowy, Mozzarella di Buffalo, tuńczyk, kapary, zielone oliwki',
+    pref: {
+      vege: false,
+      fish: true,
+      spicy: false,
+    },
+    smallPrice: 22,
+    bigPrice: 28,
+  },
+  {
+    name: 'Fiori',
+    topings:
+      'sos pomidorowy, Mozzarella di Buffalo, sardynki, chillie, papryka marynowana, pieczarki',
+    pref: {
+      vege: false,
+      fish: true,
+      spicy: true,
+    },
+    smallPrice: 24,
+    bigPrice: 30,
+  },
+];

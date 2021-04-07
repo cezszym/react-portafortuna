@@ -1,0 +1,157 @@
+.listContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.listBoard {
+  width: 80%;
+  padding: 50px 100px;
+  background: #121111;
+  border-radius: 25px;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: white;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.sizes {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  font-size: 1.3rem;
+  color: #8b8b8b;
+  .size {
+    position: relative;
+    padding: 0 12px;
+    &::before {
+      position: absolute;
+      content: '';
+      width: 100%;
+      height: 0;
+      right: 0;
+      bottom: -5px;
+      border-bottom: 2px solid #8b8b8b;
+    }
+    &:first-child::after {
+      position: absolute;
+      content: '';
+      width: 0;
+      height: 80%;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      border-right: 2px solid #8b8b8b;
+    }
+  }
+}
+
+.foodPosition {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  font-size: 2rem;
+  padding: 30px 0;
+  line-height: 2;
+  border-bottom: 1px solid #8b8b8b;
+}
+
+.positionTitle {
+  display: flex;
+  align-items: center;
+  .positionName {
+    margin-right: 15px;
+  }
+  > div {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin: 0 5px;
+  }
+  .greenMark {
+    background: #218e0f;
+  }
+  .blueMark {
+    background: #1a059d;
+  }
+  .redMark {
+    background: #de0d00;
+  }
+}
+
+.topings {
+  font-size: 1.3rem;
+  font-weight: 300;
+  color: #e5e5e5;
+  flex-shrink: 1;
+  margin-right: 3em;
+}
+
+.prices {
+  display: flex;
+  flex-shrink: 0;
+  .price:first-child {
+    margin-right: 1em;
+  }
+}
+
+@media (max-width: 1300px) {
+  .listBoard {
+    width: 95%;
+    padding: 30px 50px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .listBoard {
+    padding: 30px 40px;
+  }
+  .topings {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .title {
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+  }
+  .listBoard {
+    padding: 20px;
+  }
+  .foodPosition {
+    font-size: 1.5rem;
+    flex-direction: column;
+    text-align: center;
+    padding: 50px 0;
+  }
+  .positionTitle {
+    align-items: center;
+    justify-content: center;
+  }
+  .topings {
+    font-size: 1rem;
+    margin-right: 0;
+    padding: 20px 0;
+  }
+  .prices {
+    width: 100%;
+    justify-content: center;
+  }
+  .sizes {
+    justify-content: center;
+    &::before {
+      position: absolute;
+      content: '';
+      width: 100%;
+      height: 0;
+      right: 0;
+      bottom: -5px;
+      border-bottom: 2px solid #8b8b8b;
+    }
+  }
+}
