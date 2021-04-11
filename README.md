@@ -2,7 +2,9 @@
 
 ## Menu card section:
 
-👉 Add card list type funcinality
+👉 Improve list type func and add more items
+
+☑️ Add card list type funcinality
 
 ☑️ Add card list
 

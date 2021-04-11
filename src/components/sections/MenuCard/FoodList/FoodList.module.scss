@@ -54,7 +54,7 @@
   display: flex;
   justify-content: space-between;
   color: white;
-  font-size: 2rem;
+  font-size: 1.7rem;
   padding: 30px 0;
   line-height: 2;
   border-bottom: 1px solid #8b8b8b;
@@ -66,21 +66,25 @@
   .positionName {
     margin-right: 15px;
   }
+}
+
+.marks {
+  display: flex;
   > div {
     width: 30px;
     height: 30px;
     border-radius: 50%;
     margin: 0 5px;
   }
-  .greenMark {
-    background: #218e0f;
-  }
-  .blueMark {
-    background: #1a059d;
-  }
-  .redMark {
-    background: #de0d00;
-  }
+}
+.greenMark {
+  background: #218e0f;
+}
+.blueMark {
+  background: #1a059d;
+}
+.redMark {
+  background: #de0d00;
 }
 
 .topings {
@@ -124,7 +128,7 @@
     padding: 20px;
   }
   .foodPosition {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     flex-direction: column;
     text-align: center;
     padding: 50px 0;
@@ -132,11 +136,24 @@
   .positionTitle {
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+    .positionName {
+      margin-right: 0;
+    }
+  }
+  .marks {
+    margin-top: 5px;
+    justify-content: center;
+    > div {
+      width: 80px;
+      height: 6px;
+      border-radius: 10px;
+    }
   }
   .topings {
     font-size: 1rem;
     margin-right: 0;
-    padding: 20px 0;
+    padding: 10px 0;
   }
   .prices {
     width: 100%;

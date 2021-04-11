@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from './FoodOptions.module.scss';
 import veganIcon from '../../../../assets/images/vegan.svg';
 import fishIcon from '../../../../assets/images/fish.svg';
 import pepperIcon from '../../../../assets/images/pepper.svg';
 
-const FoodOptions = () => {
+const FoodOptions = ({ filter }) => {
   const [vegan, setVegan] = useState(false);
   const [fish, setFish] = useState(false);
   const [spicy, setSpicy] = useState(false);
@@ -17,6 +17,7 @@ const FoodOptions = () => {
             onClick={() => {
               setVegan(!vegan);
               setFish(false);
+              filter(!vegan, false, spicy);
             }}
             className={`${styles.optionCircle} ${vegan ? styles.active : ''}`}
           >
@@ -29,6 +30,7 @@ const FoodOptions = () => {
             onClick={() => {
               setFish(!fish);
               setVegan(false);
+              filter(false, !fish, spicy);
             }}
             className={`${styles.optionCircle} ${fish ? styles.active : ''}`}
           >
@@ -38,7 +40,10 @@ const FoodOptions = () => {
         </div>
         <div className={styles.option}>
           <div
-            onClick={() => setSpicy(!spicy)}
+            onClick={() => {
+              setSpicy(!spicy);
+              filter(vegan, fish, !spicy);
+            }}
             className={`${styles.optionCircle} ${spicy ? styles.active : ''}`}
           >
             <img src={pepperIcon} className={styles.icon} alt="food option" />
