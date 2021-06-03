@@ -31,7 +31,6 @@ class MenuCard extends React.Component {
   render() {
     return (
       <>
-        <h2>Click</h2>
         <SectionHeader
           head="Menu"
           subHead="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"

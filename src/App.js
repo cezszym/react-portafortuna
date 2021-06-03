@@ -4,8 +4,9 @@ import Menu from './components/sections/Menu/Menu';
 import Passion from './components/sections/Passion/Passion';
 import ProductList from './components/sections/ProuductList/ProuctList';
 import MenuCard from './components/sections/MenuCard/MenuCard';
-import './index.css';
+import './index.scss';
 import { links, products, pizza } from './data/data';
+import Locations from './components/sections/Locations/Locations';
 
 class App extends React.Component {
   render() {
@@ -16,6 +17,7 @@ class App extends React.Component {
         <Passion />
         <ProductList products={products} />
         <MenuCard pizza={pizza} />
+        <Locations />
         <div id="ph" className="placeholder" />
       </>
     );

@@ -1,5 +1,15 @@
 # Next TO DO
 
+## Localizations section:
+
+👉 Add location card
+
+👉 Add location options
+
+👉 Add location switch transition
+
+👉 Add map modal
+
 ## Menu card section:
 
 👉 Improve list type func and add more items

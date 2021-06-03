@@ -23,7 +23,7 @@ export const links = [
   },
   {
     name: 'Nasze lokale',
-    href: '/#',
+    href: '/#nasze-lokale',
   },
   {
     name: 'Kontakt',
