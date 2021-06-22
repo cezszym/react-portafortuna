@@ -9,9 +9,20 @@ class Locations extends React.Component {
     this.state = {
       activeLocation: 'krakow',
       activeTransition: false,
+      mapVisible: false,
+      mapLoading: false,
       locations: locationsData,
     };
   }
+
+  showMap = () => {
+    this.setState({ mapLoading: true });
+    setTimeout(() => {
+      this.setState({
+        mapVisible: !this.state.mapVisible,
+      });
+    }, 600);
+  };
 
   switchLocation = (location) => {
     if (
@@ -30,6 +41,7 @@ class Locations extends React.Component {
       setTimeout(() => {
         this.setState({
           activeLocation: location,
+          mapVisible: false,
         });
       }, 600);
     }
@@ -51,11 +63,28 @@ class Locations extends React.Component {
                 : styles.locationBox
             }
           >
-            <div className={styles.locationImgWrapper}>
-              <img
-                src={this.state.locations[this.state.activeLocation].img}
-                alt="Restauracja"
-              />
+            <div
+              className={
+                this.state.mapLoading
+                  ? styles.faded + ' ' + styles.locationMediaWrapper
+                  : styles.locationMediaWrapper
+              }
+            >
+              {!this.state.mapVisible ? (
+                <img
+                  src={this.state.locations[this.state.activeLocation].img}
+                  alt="Restauracja"
+                  onLoad={() => this.setState({ mapLoading: false })}
+                />
+              ) : (
+                <iframe
+                  title="mapa lokalizacji"
+                  src="https://maps.google.com/maps?q=krakow%20d%C5%82uga%201&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                  frameBorder="0"
+                  tabIndex="0"
+                  onLoad={() => this.setState({ mapLoading: false })}
+                ></iframe>
+              )}
             </div>
             <div className={styles.locationInfo}>
               <p className={styles.locationName}>
@@ -63,7 +92,9 @@ class Locations extends React.Component {
               </p>
               <div className={styles.infoLine}>
                 <p>ul. Jaworska 123</p>
-                <p>Zobacz lokalizacje na mapie</p>
+                <p onClick={() => this.showMap()}>
+                  Zobacz lokalizacje na mapie
+                </p>
               </div>
               <div className={styles.infoLine}>
                 <p>+48 989 823 948</p>
@@ -77,18 +108,30 @@ class Locations extends React.Component {
               className={styles.locationSwitch}
             >
               <p>Kraków</p>
+              <img
+                src={this.state.locations['krakow'].img}
+                alt="Restauracja Kraków"
+              />
             </div>
             <div
               onClick={() => this.switchLocation('lublin')}
               className={styles.locationSwitch}
             >
               <p>Lublin</p>
+              <img
+                src={this.state.locations['lublin'].img}
+                alt="Restauracja Lublin"
+              />
             </div>
             <div
               onClick={() => this.switchLocation('wroclaw')}
               className={styles.locationSwitch}
             >
               <p>Wrocław</p>
+              <img
+                src={this.state.locations['wroclaw'].img}
+                alt="Restauracja Wrocław"
+              />
             </div>
           </div>
         </div>
