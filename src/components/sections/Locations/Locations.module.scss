@@ -1,22 +1,92 @@
+@keyframes fade {
+  0% {
+    filter: brightness(1);
+  }
+
+  50% {
+    filter: brightness(0.05);
+  }
+
+  100% {
+    filter: brightness(1);
+  }
+}
+
 .locationsWrapper {
   display: flex;
+  flex-wrap: wrap;
   width: 100%;
-  justify-content: center;
+  justify-content: space-evenly;
 }
 
 .locationBox {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin: 0 25px;
-  height: 100px;
-  flex-basis: 1300px;
-  flex-shrink: 1;
-  flex-grow: 0;
-  background-color: red;
+  background: #121111;
+  padding: 20px;
+  border-radius: 25px;
+  &.transition {
+    animation-name: fade;
+    animation-duration: 1.2s;
+  }
+}
+
+.locationImgWrapper {
+  top: -50px;
+  height: 300px;
+  width: 600px;
+  &.transition {
+    animation-name: fade;
+    animation-duration: 1.2s;
+  }
+  img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    border-radius: 25px;
+  }
+}
+
+.locationInfo {
+  width: 100%;
+  margin-top: 10px;
+  color: white;
+  .locationName {
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 900;
+  }
+  .infoLine {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    padding: 10px 0;
+    &:first-of-type {
+      border-bottom: 1px solid #c6c3c3;
+    }
+    > p {
+      min-width: 50%;
+      text-align: center;
+      &:first-of-type {
+        border-right: 1px solid #c6c3c3;
+      }
+    }
+  }
 }
 
 .locationOptions {
-  margin: 0 25px;
+  margin: 25px;
   flex-basis: 350px;
-  flex-shrink: 0.2;
-  flex-grow: 0;
-  background: blueviolet;
+  min-width: 350px;
+  .locationSwitch {
+    background: blueviolet;
+    width: 100%;
+    height: 100px;
+    margin: 20px 0;
+    cursor: pointer;
+  }
 }

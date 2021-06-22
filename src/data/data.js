@@ -2,6 +2,9 @@ import mozarella from '../assets/images/products/mozarella.jpg';
 import parmegiano from '../assets/images/products/parmegiano.jpg';
 import prosciutto from '../assets/images/products/prosciutto.jpg';
 import salame from '../assets/images/products/salame.jpg';
+import krakow from '../assets/images/krakow.jpg';
+import lublin from '../assets/images/lublin.jpg';
+import wroclaw from '../assets/images/wroclaw.jpg';
 
 import mozarellaWebp from '../assets/images/products/mozarella.webp';
 import parmegianoWebp from '../assets/images/products/parmegiano.webp';
@@ -34,14 +37,12 @@ export const links = [
 export const products = [
   {
     name: 'Mozzarella di Buffalo',
-    desc:
-      'Vulputate odio ut enim blandit volutpat maecenas volutpat Vulputate odio ut enim blandit volutpat maecenas volutpat',
+    desc: 'Vulputate odio ut enim blandit volutpat maecenas volutpat Vulputate odio ut enim blandit volutpat maecenas volutpat',
     image: { jpg: mozarella, webp: mozarellaWebp },
   },
   {
     name: 'Parmigiano Reggiano',
-    desc:
-      ' Molestie ac feugiat sed lectus vestibulum matti Vulputate odio ut enim blandit volutpat maecenas volutpat Vulputate odio ut enim blandit volutpat maecenas volutpat',
+    desc: ' Molestie ac feugiat sed lectus vestibulum matti Vulputate odio ut enim blandit volutpat maecenas volutpat Vulputate odio ut enim blandit volutpat maecenas volutpat',
     image: { jpg: parmegiano, webp: parmegianoWebp },
   },
   {
@@ -51,8 +52,7 @@ export const products = [
   },
   {
     name: 'Spinata Piccante',
-    desc:
-      'Nunc scelerisque viverra mauris in aliquam sem fringilla ut. Vulputate odio ut enim blandit volutpat maecenas volutpat Vulputate odio ut enim blandit volutpat maecenas volutpat',
+    desc: 'Nunc scelerisque viverra mauris in aliquam sem fringilla ut. Vulputate odio ut enim blandit volutpat maecenas volutpat Vulputate odio ut enim blandit volutpat maecenas volutpat',
     image: { jpg: salame, webp: salameWebp },
   },
 ];
@@ -116,3 +116,18 @@ export const pizza = [
     bigPrice: 30,
   },
 ];
+
+export const locationsData = {
+  krakow: {
+    name: 'Kraków',
+    img: krakow,
+  },
+  lublin: {
+    name: 'Lublin',
+    img: lublin,
+  },
+  wroclaw: {
+    name: 'Wrocław',
+    img: wroclaw,
+  },
+};
