@@ -30,7 +30,7 @@ export const links = [
   },
   {
     name: 'Kontakt',
-    href: '/#',
+    href: '/#kontakt',
   },
 ];
 
@@ -92,6 +92,18 @@ export const pizza = [
     bigPrice: 24,
   },
   {
+    name: 'Diavola',
+    topings:
+      'sos pomidorowy, Mozzarella di Buffalo, Spinata Picante, papryka pepperoni, Parmigiano Reggiano',
+    pref: {
+      vege: false,
+      fish: false,
+      spicy: true,
+    },
+    smallPrice: 25,
+    bigPrice: 31,
+  },
+  {
     name: 'Tuna',
     topings:
       'sos pomidorowy, Mozzarella di Buffalo, tuńczyk, kapary, zielone oliwki',
@@ -121,13 +133,28 @@ export const locationsData = {
   krakow: {
     name: 'Kraków',
     img: krakow,
+    street: 'Długa 1',
+    mail: 'porta.krakow@mail.com',
+    phone: '444 123 552',
+    googleMapsLink:
+      'https://maps.google.com/maps?q=krakow%20d%C5%82uga%201&t=&z=15&ie=UTF8&iwloc=&output=embed',
   },
   lublin: {
     name: 'Lublin',
     img: lublin,
+    street: 'Ruska 12',
+    mail: 'porta.lublin@mail.com',
+    phone: '555 123 552',
+    googleMapsLink:
+      'https://maps.google.com/maps?q=Ruska%2012,%20Lubli&t=&z=13&ie=UTF8&iwloc=&output=embed',
   },
   wroclaw: {
     name: 'Wrocław',
     img: wroclaw,
+    street: 'Warszawska 44',
+    mail: 'porta.wroclaw@mail.com',
+    phone: '888 123 552',
+    googleMapsLink:
+      'https://maps.google.com/maps?q=Warszawska%2044,%20Wroc%C5%82aw&t=&z=13&ie=UTF8&iwloc=&output=embed',
   },
 };

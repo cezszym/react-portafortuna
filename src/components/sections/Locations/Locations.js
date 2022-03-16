@@ -79,7 +79,10 @@ class Locations extends React.Component {
               ) : (
                 <iframe
                   title="mapa lokalizacji"
-                  src="https://maps.google.com/maps?q=krakow%20d%C5%82uga%201&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                  src={
+                    this.state.locations[this.state.activeLocation]
+                      .googleMapsLink
+                  }
                   frameBorder="0"
                   tabIndex="0"
                   onLoad={() => this.setState({ mapLoading: false })}
@@ -91,14 +94,16 @@ class Locations extends React.Component {
                 {this.state.locations[this.state.activeLocation].name}
               </p>
               <div className={styles.infoLine}>
-                <p>ul. Jaworska 123</p>
-                <p onClick={() => this.showMap()}>
+                <p>
+                  ul. {this.state.locations[this.state.activeLocation].street}
+                </p>
+                <p className={styles.showMap} onClick={() => this.showMap()}>
                   Zobacz lokalizacje na mapie
                 </p>
               </div>
               <div className={styles.infoLine}>
-                <p>+48 989 823 948</p>
-                <p>porta.krakow@mail.com</p>
+                <p>{this.state.locations[this.state.activeLocation].phone}</p>
+                <p>{this.state.locations[this.state.activeLocation].mail}</p>
               </div>
             </div>
           </div>
